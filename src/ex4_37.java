@@ -6,7 +6,20 @@ public class ex4_37 {
         }
         int hours = minutes / 60;
         minutes = minutes % 60;
-        return hours + "h " + minutes + "m " + seconds + "s";
+
+        String leadingHours = "";
+        String leadingMinutes = "";
+        String leadingSeconds = "";
+        if (hours < 10) {
+            leadingHours = "0";
+        }
+        if (minutes < 10) {
+            leadingMinutes = "0";
+        }
+        if (seconds < 10) {
+            leadingSeconds = "0";
+        }
+        return leadingHours + hours + "h " + leadingMinutes + minutes + "m " + leadingSeconds + seconds + "s";
     }
 
     static String getDurationString(int seconds) {

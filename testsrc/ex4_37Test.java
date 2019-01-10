@@ -21,7 +21,7 @@ class ex4_37Test {
 
     @Test
     void testGetDurationString_ValidMinutesAndSeconds() {
-        assertEquals("1h 15m 10s", ex4_37.getDurationString(75, 10));
+        assertEquals("01h 15m 10s", ex4_37.getDurationString(75, 10));
     }
 
     @Test
@@ -31,6 +31,6 @@ class ex4_37Test {
 
     @Test
     void testGetDurationString_ValidSecondsOnly() {
-        assertEquals("1h 1m 40s", ex4_37.getDurationString(3700));
+        assertEquals("01h 01m 40s", ex4_37.getDurationString(3700));
     }
 }
