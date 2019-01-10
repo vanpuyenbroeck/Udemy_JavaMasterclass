@@ -28,6 +28,6 @@ public class ex4_37 {
         }
         int remainingMinutes = seconds / 60;
         int remainingSeconds = seconds % 60;
-        return getDurationString(remainingMinutes,remainingSeconds);
+        return getDurationString(remainingMinutes, remainingSeconds);
     }
 }
