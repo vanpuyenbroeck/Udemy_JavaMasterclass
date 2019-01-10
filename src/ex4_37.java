@@ -1,8 +1,10 @@
 public class ex4_37 {
 
+    private static final String INVALID_VALUE_MESSAGE = "Invalid value";
+
     static String getDurationString(int minutes, int seconds) {
         if (minutes < 0 || seconds < 0 || seconds > 59) {
-            return "Invalid value";
+            return INVALID_VALUE_MESSAGE;
         }
         int hours = minutes / 60;
         minutes = minutes % 60;
@@ -24,7 +26,7 @@ public class ex4_37 {
 
     static String getDurationString(int seconds) {
         if (seconds < 0) {
-            return "Invalid value";
+            return INVALID_VALUE_MESSAGE;
         }
         int remainingMinutes = seconds / 60;
         int remainingSeconds = seconds % 60;
