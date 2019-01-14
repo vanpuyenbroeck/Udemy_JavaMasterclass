@@ -1,3 +1,5 @@
+package Chapter4;
+
 public class ex4_34_6 {
     public static boolean hasTeen(int num1, int num2, int num3) {
 

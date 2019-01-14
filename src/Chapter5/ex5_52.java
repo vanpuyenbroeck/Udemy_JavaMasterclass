@@ -1,13 +1,15 @@
+package Chapter5;
+
 import java.util.Scanner;
 
 public class ex5_52 {
     public static void main(String[] args) {
         int min = 0;
         int max = 0;
+        boolean firstNumber = true;
 
         Scanner scanner = new Scanner(System.in);
 
-        boolean firstNumber = true;
         while (true) {
             int input;
             System.out.println("Enter number:");
@@ -23,11 +25,10 @@ public class ex5_52 {
                 } else if (input > max) {
                     max = input;
                 }
-                scanner.nextLine();
-
             } else {
                 break;
             }
+            scanner.nextLine();
         }
         System.out.println("Minimum: " + min);
         System.out.println("Maximum: " + max);

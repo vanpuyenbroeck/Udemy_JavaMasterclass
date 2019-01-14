@@ -1,3 +1,5 @@
+package Chapter5;
+
 import java.util.Scanner;
 
 public class ex5_51 {

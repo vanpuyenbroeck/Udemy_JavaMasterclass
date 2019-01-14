@@ -1,3 +1,5 @@
+package Chapter3;
+
 public class ex3_22 {
     public static void main(String[] args) {
         double firstNumber = 20d;

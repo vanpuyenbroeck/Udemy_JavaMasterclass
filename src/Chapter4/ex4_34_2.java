@@ -1,3 +1,5 @@
+package Chapter4;
+
 public class ex4_34_2 {
 
     public static boolean bark(boolean barking, int hourOfDay) {
