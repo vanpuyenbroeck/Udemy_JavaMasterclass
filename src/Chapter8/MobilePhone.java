@@ -21,10 +21,10 @@ public class MobilePhone {
         }
     }
 
-    public void search(String name){
+    public void search(String name) {
         if (query(name) != null) {
             System.out.println("List contains " + name);
-        }else {
+        } else {
             System.out.println("Contact not found");
         }
     }
@@ -60,12 +60,14 @@ public class MobilePhone {
     }
 
     public void modifyExistingContact(String searchContactName, String newContactName, String newContactPhone) {
-        modifyExistingContact(query(searchContactName), Contact.createContact(newContactName,newContactPhone));
+        modifyExistingContact(query(searchContactName), Contact.createContact(newContactName, newContactPhone));
     }
 
-    private void modifyExistingContact(Contact searchContact, Contact newContact) {
-        if (contactList.contains(searchContact)) {
-            contactList.set(contactList.indexOf(searchContact), newContact);
+    private void modifyExistingContact(Contact old, Contact update) {
+        if (update.getName().equals(this.query(update.getName()).getName())) {
+            System.out.println("New name must be different");
+        } else if (contactList.contains(old)) {
+            contactList.set(contactList.indexOf(old), update);
             System.out.println("Contact updated");
         } else {
             System.out.println("Contact not found");
