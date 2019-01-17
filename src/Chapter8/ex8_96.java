@@ -45,15 +45,6 @@ public class ex8_96 {
         collection.addSongToPlaylist("Does not exist", "Battery", playlist);
     }
 
-    private static void showMenu() {
-        System.out.println("========\nOptions: ");
-        System.out.println("1 - Quit\n" +
-                "2 - Skip to next song\n" +
-                "3 - Skip to previous song\n" +
-                "4 - Replay current song\n" +
-                "5 - List the songs in the playlist");
-    }
-
     private static void playSongsInPlaylist(Playlist playlist) {
         ListIterator<Song> iterator = playlist.getPlaylist().listIterator();
         boolean isPlaying = true;
@@ -118,6 +109,15 @@ public class ex8_96 {
             }
         }
         scanner.close();
+    }
+
+    private static void showMenu() {
+        System.out.println("========\nOptions: ");
+        System.out.println("1 - Quit\n" +
+                "2 - Skip to next song\n" +
+                "3 - Skip to previous song\n" +
+                "4 - Replay current song\n" +
+                "5 - List the songs in the playlist");
     }
 
     private static void showCurrentSong(ListIterator<Song> iterator, boolean forward) {
