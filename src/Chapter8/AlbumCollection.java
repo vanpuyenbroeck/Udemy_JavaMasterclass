@@ -67,12 +67,4 @@ public class AlbumCollection {
         System.out.println("Album with that name does not exist in collection");
         return false;
     }
-
-    //    private Song getSong(String album, String title) {
-//        Album searchAlbum = findAlbum(album);
-//        if (searchAlbum != null) {
-//            return searchAlbum.findSong(title);
-//        }
-//        return null;
-//    }
 }
