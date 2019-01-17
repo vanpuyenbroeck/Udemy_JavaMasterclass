@@ -103,6 +103,16 @@ public class ex8_96 {
                 case 5:
                     playlist.showPlaylist();
                     break;
+                case 6:
+                    if (playlist.getPlaylist().size() > 0) {
+                        iterator.remove();
+                        if (iterator.hasNext()) {
+                            showCurrentSong(iterator, true);
+                        } else if (iterator.hasPrevious()){
+                            showCurrentSong(iterator, false);
+                        }
+                    }
+                    break;
                 default:
                     System.out.println("Invalid input");
                     break;
@@ -117,7 +127,8 @@ public class ex8_96 {
                 "2 - Skip to next song\n" +
                 "3 - Skip to previous song\n" +
                 "4 - Replay current song\n" +
-                "5 - List the songs in the playlist");
+                "5 - List the songs in the playlist\n" +
+                "6 - Remove current song from playlist");
     }
 
     private static void showCurrentSong(ListIterator<Song> iterator, boolean forward) {
