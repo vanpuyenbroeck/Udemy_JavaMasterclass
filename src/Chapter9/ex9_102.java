@@ -10,10 +10,10 @@ public class ex9_102 {
         Creature monster = new Creature("Spider", 3, 2);
         System.out.println(monster.toString());
 
-        List<String> state = monster.writeState();
+        List<String> state = saveObjectState(monster);
 
         List<String> newState = readValues();
-        monster.readState(newState);
+        loadObjectState(newState, monster);
 
         System.out.println(monster.toString());
 
