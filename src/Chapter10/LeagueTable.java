@@ -11,21 +11,12 @@ public class LeagueTable<T extends Team> {
     }
 
     public boolean addTeam(T team) {
-        if (alreadyInLeague(team)) {
+        if (teams.contains(team)){
             System.out.println(team.getName() + " already exists in league list");
             return false;
         }
         teams.add(team);
         return true;
-    }
-
-    private boolean alreadyInLeague(T team) {
-        for (T i : teams) {
-            if (i == team) {
-                return true;
-            }
-        }
-        return false;
     }
 
     public void printOrderedList() {

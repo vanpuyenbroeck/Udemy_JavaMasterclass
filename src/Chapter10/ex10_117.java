@@ -6,11 +6,13 @@ public class ex10_117 {
         FootballTeam genk = new FootballTeam("Genk", 5);
         FootballTeam club = new FootballTeam("Club Brugge", 4);
         FootballTeam antwerp = new FootballTeam("Antwerp", 10);
+        FootballTeam shouldGiveError = antwerp;
         BaseballTeam yorkers = new BaseballTeam("Yorkers", 17);
 
         firstClass.addTeam(genk);
         firstClass.addTeam(club);
         firstClass.addTeam(antwerp);
+        firstClass.addTeam(shouldGiveError);
 
 //        firstClass.addTeam(yorkers);
 
