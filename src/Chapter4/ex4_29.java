@@ -15,7 +15,7 @@ public class ex4_29 {
     }
 
     private static void displayHighscorePosition(String playerName, int tablePosition) {
-        System.out.println(playerName + " managed to get to position " + tablePosition);
+        System.out.println(playerName + " managed to get to Node " + tablePosition);
     }
 
     private static int calculateHighscorePosition(int playerScore) {

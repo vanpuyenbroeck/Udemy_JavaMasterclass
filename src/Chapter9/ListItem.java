@@ -9,9 +9,21 @@ public abstract class ListItem {
         this.item = item;
     }
 
-    abstract public void next();
-    abstract public void previous();
-    abstract public void setNext(Object object);
-    abstract public void setPrevious(Object object);
-    abstract public int compareTo(ListItem listItem);
+    abstract ListItem next();
+
+    abstract ListItem previous();
+
+    abstract void setNext(ListItem nexItem);
+
+    abstract void setPrevious(ListItem previousItem);
+
+    abstract int compareTo(ListItem listItem);
+
+    public Object getItem() {
+        return item;
+    }
+
+    public void setItem(Object item) {
+        this.item = item;
+    }
 }

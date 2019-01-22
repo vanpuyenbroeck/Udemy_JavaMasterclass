@@ -69,7 +69,7 @@ public class ex8_96 {
                     if (iterator.hasNext()) {
                         showCurrentSong(iterator, forward);
                     } else {
-                        System.out.println("Already at last position in playlist");
+                        System.out.println("Already at last Node in playlist");
                         forward = false;
                     }
                     break;
