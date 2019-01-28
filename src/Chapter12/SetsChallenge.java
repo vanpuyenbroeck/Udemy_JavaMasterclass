@@ -1,9 +1,6 @@
 package Chapter12;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class SetsChallenge {
 
@@ -13,16 +10,19 @@ public class SetsChallenge {
 
     private static boolean addToMap(Map<String, HeavenlyBody> map, HeavenlyBody body){
         String key = mapKey(body);
-        if (map.containsKey(key)) {
-            System.out.println("Map already contains " + body.getName()+body.getBodyType());
-            return false;
-        }
         map.put(key, body);
         return true;
     }
 
     private static String mapKey(HeavenlyBody body) {
         return body.getName() + body.getBodyType();
+    }
+
+    private static void printMap(Map<String, HeavenlyBody> map) {
+        System.out.println("All items in map:");
+        for (String key : map.keySet()) {
+            System.out.println("\t" + map.get(key).getName());
+        }
     }
 
     public static void main(String[] args) {
@@ -126,6 +126,9 @@ public class SetsChallenge {
             System.out.println("\t" + star.getName());
         }
 
+        System.out.print("Pluto orbital period: ");
+        System.out.println(solarSystem.get("PlutoPLANET").getOrbitalPeriod());
+
         HeavenlyBody pluto = new Planet("Pluto", 842);
         addToMap(solarSystem, pluto);
         planets.add(pluto);
@@ -133,6 +136,11 @@ public class SetsChallenge {
         for(HeavenlyBody planet : planets) {
             System.out.println(planet.getName() + ": " + planet.getOrbitalPeriod());
         }
+
+        printMap(solarSystem);
+
+        System.out.print("Pluto orbital period: ");
+        System.out.println(solarSystem.get("PlutoPLANET").getOrbitalPeriod());
 
     }
 }
