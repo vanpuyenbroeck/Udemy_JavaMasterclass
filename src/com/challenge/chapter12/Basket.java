@@ -36,4 +36,8 @@ public class Basket {
         }
         return s + "Total cost " + totalCost;
     }
+
+    public void emptyBasket() {
+        this.list.clear();
+    }
 }
