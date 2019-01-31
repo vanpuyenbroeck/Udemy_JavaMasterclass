@@ -37,6 +37,15 @@ public class StockList {
         return 0;
     }
 
+    public int unReserve(String item, int quantity) {
+        StockItem inStock = list.getOrDefault(item, null);
+        if ((inStock != null) && ((inStock.reservedAmount()-quantity) >= 0) && quantity > 0) {
+            inStock.reserveItem(-quantity);
+            return quantity;
+        }
+        return 0;
+    }
+
     public StockItem get(String key) {
         return list.get(key);
     }

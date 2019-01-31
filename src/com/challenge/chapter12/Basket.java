@@ -14,7 +14,7 @@ public class Basket {
     }
 
     public int addToBasket(StockItem item, int quantity) {
-        if ((item != null) && (quantity > 0)) {
+        if ((item != null)) {
             int inBasket = list.getOrDefault(item, 0);
             list.put(item, inBasket + quantity);
             return inBasket;
@@ -39,5 +39,9 @@ public class Basket {
 
     public void emptyBasket() {
         this.list.clear();
+    }
+
+    public String getName() {
+        return name;
     }
 }
