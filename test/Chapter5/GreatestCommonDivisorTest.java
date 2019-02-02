@@ -25,4 +25,9 @@ class GreatestCommonDivisorTest {
     void getGreatestCommonDivisor3() {
         assertEquals(9, GreatestCommonDivisor.getGreatestCommonDivisor(81, 153));
     }
+
+    @Test
+    void getGreatestCommonDivisor4() {
+        assertEquals(10, GreatestCommonDivisor.getGreatestCommonDivisor(10, 10));
+    }
 }
